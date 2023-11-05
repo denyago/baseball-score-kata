@@ -36,3 +36,4 @@ out/
 .vscode/
 /kotlin/.gradle/
 /kotlin/build/
+/typescript/node_modules/

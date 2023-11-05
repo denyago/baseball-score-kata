@@ -1,13 +1,13 @@
 package com.finmid.kata
 
 enum class Play {
+    OUT,
     STRIKE,
     BALL,
-    OUT,
+    HOMERUN,
     SINGLE,
     DOUBLE,
     TRIPLE,
-    HOMERUN,
     STEAL,
     SACRIFICE_OUT,
 }
