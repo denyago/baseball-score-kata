@@ -16,8 +16,11 @@ repositories {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.20")
+    val http4Version = "5.7.1.0"
+    implementation("org.http4k:http4k-core:$http4Version")
+    implementation("org.http4k:http4k-client-okhttp:$http4Version")
     testImplementation("io.kotest:kotest-assertions-core:4.6.1")
-    val junitVersion = "5.7.2"
+    val junitVersion = "5.10.0"
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
