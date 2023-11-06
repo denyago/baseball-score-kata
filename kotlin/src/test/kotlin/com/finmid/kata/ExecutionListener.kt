@@ -6,7 +6,6 @@ import org.http4k.core.Request
 import org.junit.jupiter.api.extension.AfterAllCallback
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.api.extension.TestWatcher
-import java.time.Instant
 
 class ExecutionListener : AfterAllCallback, TestWatcher {
 
@@ -17,7 +16,7 @@ class ExecutionListener : AfterAllCallback, TestWatcher {
     override fun afterAll(context: ExtensionContext?) {
         val client = OkHttp()
         client(Request(Method.POST, reportUrl).body(
-            "${Instant.now()},$teamName,$failed,$succeeded,$lastTest"
+            "$teamName,$failed,$succeeded,$lastTest"
         ))
     }
 
