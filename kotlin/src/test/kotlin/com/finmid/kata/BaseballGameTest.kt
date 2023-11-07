@@ -58,7 +58,6 @@ class BaseballGameTest {
     }
 
     @Test
-    @Disabled
     fun doubleDouble() {
         val game = BaseballGame()
         game.play(DOUBLE)

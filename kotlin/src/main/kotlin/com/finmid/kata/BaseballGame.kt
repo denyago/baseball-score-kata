@@ -14,6 +14,8 @@ enum class Play {
 
 class BaseballGame {
     private var score: Pair<Int, Int> = 0 to 0
+    //                  Base:   1  2  3  4 Score!
+    private val bases = mutableListOf(1, 0, 0, 0, 0)
 
     fun play(event: Play) {
         when (event) {
@@ -30,7 +32,11 @@ class BaseballGame {
                 score = 0 to 0
             }
             Play.SINGLE -> {
-                score = 0 to 0
+                bases[4] += bases[3]
+                bases[3] = bases[2]
+                bases[2] = bases[1]
+                bases[1] = bases[0]
+                score = bases[4] to 0
             }
             Play.DOUBLE -> {
                 score = 0 to 0
