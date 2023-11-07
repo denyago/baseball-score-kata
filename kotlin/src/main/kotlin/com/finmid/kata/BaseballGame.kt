@@ -35,6 +35,9 @@ class BaseballGame {
             Play.DOUBLE -> {
                 score = 0 to 0
             }
+            Play.TRIPLE -> {
+                score = 0 to 0
+            }
 
             else -> TODO()
         }

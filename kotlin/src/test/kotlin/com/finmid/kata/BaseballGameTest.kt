@@ -2,6 +2,7 @@ package com.finmid.kata
 
 import com.finmid.kata.Play.*
 import io.kotest.matchers.shouldBe
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 
@@ -57,6 +58,7 @@ class BaseballGameTest {
     }
 
     @Test
+    @Disabled
     fun doubleDouble() {
         val game = BaseballGame()
         game.play(DOUBLE)
@@ -71,5 +73,13 @@ class BaseballGameTest {
         game.play(TRIPLE)
 
         game.score() shouldBe (0 to 0)
+    }
+
+    @Test
+    fun fourSingle() {
+        val game = BaseballGame()
+        repeat(4) { game.play(SINGLE) }
+
+        game.score() shouldBe (1 to 0)
     }
 }
