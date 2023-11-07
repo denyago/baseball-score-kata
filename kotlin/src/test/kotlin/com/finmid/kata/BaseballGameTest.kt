@@ -47,4 +47,12 @@ class BaseballGameTest {
 
         game.score() shouldBe (0 to 0)
     }
+
+    @Test
+    fun double() {
+        val game = BaseballGame()
+        game.play(DOUBLE)
+
+        game.score() shouldBe (0 to 0)
+    }
 }
