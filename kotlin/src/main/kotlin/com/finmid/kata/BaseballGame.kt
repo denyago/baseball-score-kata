@@ -20,6 +20,9 @@ class BaseballGame {
             Play.HOMERUN -> {
                 score = 1 to 0
             }
+            Play.OUT -> {
+                score = 0 to 0
+            }
 
             else -> TODO()
         }
