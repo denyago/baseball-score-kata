@@ -39,7 +39,11 @@ class BaseballGame {
                 score = bases[4] to 0
             }
             Play.DOUBLE -> {
-                score = 0 to 0
+                bases[4] += bases[3]
+                bases[4] += bases[2]
+                bases[3] = bases[1]
+                bases[2] = bases[0]
+                score = bases[4] to 0
             }
             Play.TRIPLE -> {
                 score = 0 to 0
