@@ -1,8 +1,6 @@
 package com.finmid.kata
 
-import com.finmid.kata.Play.HOMERUN
-import com.finmid.kata.Play.OUT
-import com.finmid.kata.Play.STRIKE
+import com.finmid.kata.Play.*
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -30,6 +28,14 @@ class BaseballGameTest {
     fun strike() {
         val game = BaseballGame()
         game.play(STRIKE)
+
+        game.score() shouldBe (0 to 0)
+    }
+
+    @Test
+    fun ball() {
+        val game = BaseballGame()
+        game.play(BALL)
 
         game.score() shouldBe (0 to 0)
     }
