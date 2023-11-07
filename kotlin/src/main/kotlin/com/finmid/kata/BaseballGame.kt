@@ -26,6 +26,9 @@ class BaseballGame {
             Play.STRIKE -> {
                 score = 0 to 0
             }
+            Play.BALL -> {
+                score = 0 to 0
+            }
 
             else -> TODO()
         }
