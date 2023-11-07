@@ -13,12 +13,19 @@ enum class Play {
 }
 
 class BaseballGame {
+    private var score: Pair<Int, Int> = 0 to 0
 
     fun play(event: Play) {
-        TODO()
+        when (event) {
+            Play.HOMERUN -> {
+                score = 1 to 0
+            }
+
+            else -> TODO()
+        }
     }
 
     fun score(): Pair<Int, Int> {
-        TODO()
+        return score
     }
 }
