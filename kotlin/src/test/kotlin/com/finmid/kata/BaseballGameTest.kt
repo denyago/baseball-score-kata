@@ -1,8 +1,13 @@
 package com.finmid.kata
 
-import com.finmid.kata.Play.*
+import com.finmid.kata.Play.BALL
+import com.finmid.kata.Play.DOUBLE
+import com.finmid.kata.Play.HOMERUN
+import com.finmid.kata.Play.OUT
+import com.finmid.kata.Play.SINGLE
+import com.finmid.kata.Play.STRIKE
+import com.finmid.kata.Play.TRIPLE
 import io.kotest.matchers.shouldBe
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 
